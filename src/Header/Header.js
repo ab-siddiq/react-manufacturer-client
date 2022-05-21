@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 const Header = () => {
     const menuItem = <>
         <li><Link to='/'>Home</Link></li>
-        <li><Link to='/'>Product</Link></li>
-        <li><Link to='/'>About</Link></li>
-        <li><Link to='/'>Login</Link></li>
+        <li><Link to='/products'>Product</Link></li>
+        <li><Link to='/about'>About</Link></li>
+        <li><Link to='/login'>Login</Link></li>
     </>
   return (
     <div class="navbar bg-base-100">
