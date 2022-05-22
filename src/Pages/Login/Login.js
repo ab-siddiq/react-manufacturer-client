@@ -19,7 +19,7 @@ const Login = () => {
       <div class="card w-96 bg-base-100 shadow-xl ">
         <div class="card-body">
           <h2 class="card-title">Please login!</h2>
-          <form>
+          {/* <form>
             <div class="form-control w-full max-w-xs">
               <label class="label">
                 <span class="label-text">Username</span>
@@ -46,7 +46,7 @@ const Login = () => {
                 <span class="label-text-alt">Alt label</span>
               </label>
             </div>
-          </form>
+          </form> */}
           <div class="card-actions justify-end">
             <button class="btn  btn-primary btn-block">Login</button>
           </div>
