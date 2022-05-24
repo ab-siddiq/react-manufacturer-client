@@ -5,6 +5,8 @@ import {
 } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import { useForm } from "react-hook-form";
+import Spinner from "../../Shared/Spinner";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -21,13 +23,13 @@ const Login = () => {
     console.log("user", user);
   }
   if (loading || gLoading) {
-    return <p>Loading...</p>
+    return <Spinner></Spinner>;
   }
 
-
-
   if (gError || error) {
-    return (signInError = <p className="text-red-500 mb-2">{gError?.message || error?.message}</p>);
+    return (signInError = (
+      <p className="text-red-500 mb-2">{gError?.message || error?.message}</p>
+    ));
   }
   console.log(signInError);
   const onSubmit = (data) => {
@@ -65,10 +67,14 @@ const Login = () => {
               />
               <label class="label">
                 {errors.email?.type === "required" && (
-                  <span class="label-text-alt text-red-500">{errors.email.message}</span>
+                  <span class="label-text-alt text-red-500">
+                    {errors.email.message}
+                  </span>
                 )}
                 {errors.email?.type === "pattern" && (
-                  <span class="label-text-alt text-red-500">{errors.email.message}</span>
+                  <span class="label-text-alt text-red-500">
+                    {errors.email.message}
+                  </span>
                 )}
               </label>
             </div>
@@ -94,17 +100,30 @@ const Login = () => {
               />
               <label class="label">
                 {errors.password?.type === "required" && (
-                  <span class="label-text-alt text-red-500">{errors.password.message}</span>
+                  <span class="label-text-alt text-red-500">
+                    {errors.password.message}
+                  </span>
                 )}
                 {errors.password?.type === "minLength" && (
-                  <span class="label-text-alt text-red-500">{errors.password.message}</span>
+                  <span class="label-text-alt text-red-500">
+                    {errors.password.message}
+                  </span>
                 )}
               </label>
             </div>
             {signInError}
-            <input type='submit' class="btn btn-active btn-primary btn-block" value='Login'/>
-            
+            <input
+              type="submit"
+              class="btn btn-active btn-primary btn-block"
+              value="Login"
+            />
           </form>
+          <div className="">
+            <span>Didn't register yet? </span>
+            <Link to="/register" className="text-primary">
+              Create Account.
+            </Link>
+          </div>
           <div class="divider">OR</div>
           {/* sign in with google  */}
           <div class="card-actions justify-end">

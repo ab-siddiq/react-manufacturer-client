@@ -2,12 +2,25 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
-    const menuItem = <>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/products'>Product</Link></li>
-        <li><Link to='/about'>About</Link></li>
-        <li><Link to='/login'>Login</Link></li>
+  const menuItem = (
+    <>
+      <li>
+        <Link to="/">Home</Link>
+      </li>
+      <li>
+        <Link to="/products">Product</Link>
+      </li>
+      <li>
+        <Link to="/about">About</Link>
+      </li>
+      <li>
+        <Link to="/login">Login</Link>
+      </li>
+      <li>
+        <Link to="/register">Register</Link>
+      </li>
     </>
+  );
   return (
     <div class="navbar bg-base-100">
       <div class="navbar-start">
@@ -35,14 +48,13 @@ const Header = () => {
             {menuItem}
           </ul>
         </div>
-        <Link to='/' class="btn btn-ghost normal-case text-xl">Cycle Equipment Manufacturer</Link>
+        <Link to="/" class="btn btn-ghost normal-case text-xl">
+          Cycle Equipment Manufacturer
+        </Link>
       </div>
       <div class="navbar-center hidden lg:flex">
-        <ul class="menu menu-horizontal p-0">
-          {menuItem}
-        </ul>
+        <ul class="menu menu-horizontal p-0">{menuItem}</ul>
       </div>
-      
     </div>
   );
 };
