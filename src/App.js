@@ -3,6 +3,7 @@ import "./App.css";
 import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
 import About from "./Pages/About/About";
+import DashBoard from "./Pages/DashBoard/DashBoard";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
 import NotFound from "./Pages/NotFound/NotFound";
@@ -19,6 +20,7 @@ function App() {
         <Route path="/about" element={<About></About>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
+        <Route path="/dashboard" element={<DashBoard></DashBoard>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
