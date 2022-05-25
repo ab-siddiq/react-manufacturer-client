@@ -24,15 +24,18 @@ const Header = () => {
 
       <li>{user && <Link to="/dashboard">Dashboard</Link>}</li>
 
-      <li>
-        {user ? (
+      {user ? (
+        <li>
           <Link to="/login" onClick={logOut}>
             SignOut
           </Link>
-        ) : (
+        </li>
+      ) : (
+        <li>
           <Link to="/login">Login</Link>
-        )}
-      </li>
+        </li>
+      )}
+
       <li>{!user && <Link to="/register">Register</Link>}</li>
     </>
   );
