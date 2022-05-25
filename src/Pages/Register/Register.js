@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   useCreateUserWithEmailAndPassword,
   useUpdateProfile,
 } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import useToken from "./../../hooks/useToken";
 
@@ -14,14 +14,22 @@ const Register = () => {
 
   const [updateProfile, updating, updateError] = useUpdateProfile(auth);
   const [token] = useToken(user);
+  const navigate = useNavigate();
+  const location = useLocation();
+  let from = location.state?.from?.pathname || "/";
+
   const {
     register,
     formState: { errors },
     handleSubmit,
   } = useForm();
-  if (user) {
-    console.log(user);
-  }
+
+  useEffect(() => {
+    if (token) {
+      navigate(from, { replace: true });
+    }
+  }, [token, from, navigate]);
+
   const onSubmit = async (data) => {
     console.log(data);
     await createUserWithEmailAndPassword(data.email, data.password);
