@@ -21,6 +21,9 @@ const Header = () => {
       <li>
         <Link to="/about">About</Link>
       </li>
+
+      <li>{user && <Link to="/dashboard">Dashboard</Link>}</li>
+
       <li>
         {user ? (
           <Link to="/login" onClick={logOut}>
@@ -30,14 +33,7 @@ const Header = () => {
           <Link to="/login">Login</Link>
         )}
       </li>
-
-      {user ? (
-        <li>
-          <Link to="/dashboard">Dashboard</Link>
-        </li>
-      ) : (
-        <li>{!user && <Link to="/register">Register</Link>}</li>
-      )}
+      <li>{!user && <Link to="/register">Register</Link>}</li>
     </>
   );
   return (
