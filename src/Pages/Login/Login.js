@@ -22,7 +22,7 @@ const Login = () => {
   const navigate = useNavigate();
   const [token] = useToken(user || gUser);
   let signInError;
-  if (gUser || user) {
+  if (token) {
     console.log("user", user);
     navigate("/dashboard");
   }
