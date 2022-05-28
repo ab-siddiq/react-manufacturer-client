@@ -4,8 +4,9 @@ import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
 import About from "./Pages/About/About";
 import AddReview from "./Pages/DashBoard/AddReview/AddReview";
+import AllUsers from "./Pages/DashBoard/AllUsers/AllUsers";
 import DashBoard from "./Pages/DashBoard/DashBoard";
-import DashboardPannel from "./Pages/DashBoard/DashBoardPannel/DashboardPannel";
+import DashboardPanel from "./Pages/DashBoard/DashBoardPanel/DashboardPanel";
 import MyOrders from "./Pages/DashBoard/MyOrders/MyOrders";
 import MyProfile from "./Pages/DashBoard/MyProfile/MyProfile";
 import Home from "./Pages/Home/Home";
@@ -25,10 +26,11 @@ function App() {
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
         <Route path="/dashboard" element={<DashBoard></DashBoard>}>
-          <Route index element={<DashboardPannel></DashboardPannel>}></Route>
+          <Route index element={<DashboardPanel></DashboardPanel>}></Route>
           <Route path="myProfile" element={<MyProfile></MyProfile>}></Route>
           <Route path="addReview" element={<AddReview></AddReview>}></Route>
           <Route path="myOrders" element={<MyOrders></MyOrders>}></Route>
+          <Route path="allUsers" element={<AllUsers></AllUsers>}></Route>
         </Route>
         {/* <Route path="/myProfile" element={<MyProfile></MyProfile>}></Route>
         <Route path="/addReview" element={<AddReview></AddReview>}></Route>
