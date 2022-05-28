@@ -1,27 +1,34 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { useQuery } from "react-query";
 import User from "./User/User";
 
 const AllUsers = () => {
-  const [users, setUsers] = useState([]);
 
-  useEffect(() => {
-    fetch("http://localhost:5000/user")
-      .then((res) => res.json())
-      .then((data) => setUsers(data));
-  }, []);
+//  const {data: users, isLoading, refetch} = useQuery('users', () => 
+//     fetch("http://localhost:5000/user"), {
+//     method: 'GET',
+// }).then((res) => res.json())
+//       if(isLoading){
+//           return 'loading...'
+//       }
+const {data: users, isLoading, refetch} = useQuery('users', ()=> fetch('http://localhost:5000/user').then(res=>res.json()))
+if(isLoading){
+  return <p>loading...</p>;
+}
+
   return (
-    <div class="overflow-x-auto">
-      <table class="table w-full">
+    <div className="overflow-x-auto">
+      <table className="table w-full">
         <thead>
           <tr>
             <th>SL</th>
-            <th>Id</th>
             <th>Email</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
           {users.map((user, index) => (
-            <User key={user._id} user={user} index={index}></User>
+            <User key={user._id} user={user} index={index} refetch={refetch}></User>
           ))}
         </tbody>
       </table>

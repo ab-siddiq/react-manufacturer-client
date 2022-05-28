@@ -73,7 +73,7 @@ const Header = () => {
       <div className="navbar-start">
         <label
           tabIndex="1"
-          for="sidebar-drawer"
+          htmlFor="sidebar-drawer"
           className="btn btn-ghost lg:hidden"
         >
           <svg
