@@ -5,7 +5,7 @@ const MyPortfolio = () => {
   return (
     <div className="grid grid-cols-4 gp-5 my-[50px]">
       <div className="mt-[150px]">
-        <div class="flex justify-center">
+        <div className="flex justify-center">
           <img
             style={{
               height: "150px",

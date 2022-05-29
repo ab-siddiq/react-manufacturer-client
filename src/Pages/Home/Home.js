@@ -7,9 +7,9 @@ import Parts from "./Parts";
 import Reviews from "./Reviews";
 
 const Home = () => {
-  return <div>
+  return <div className="mx-auto" style={{width: '80%'}}>
     <Banner></Banner>
-    <Parts></Parts>
+    <Parts ></Parts>
     <Categories></Categories>
     <Mall></Mall>
     <BusinessSummary></BusinessSummary>

@@ -5,13 +5,13 @@ import User from "./User/User";
 const AllUsers = () => {
 
 //  const {data: users, isLoading, refetch} = useQuery('users', () => 
-//     fetch("http://localhost:5000/user"), {
+//     fetch("https://intense-sierra-65183.herokuapp.com/user"), {
 //     method: 'GET',
 // }).then((res) => res.json())
 //       if(isLoading){
 //           return 'loading...'
 //       }
-const {data: users, isLoading, refetch} = useQuery('users', ()=> fetch('http://localhost:5000/user').then(res=>res.json()))
+const {data: users, isLoading, refetch} = useQuery('users', ()=> fetch('https://intense-sierra-65183.herokuapp.com/user').then(res=>res.json()))
 if(isLoading){
   return <p>loading...</p>;
 }

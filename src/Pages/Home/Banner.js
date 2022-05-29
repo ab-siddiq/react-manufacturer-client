@@ -3,43 +3,47 @@ import React from "react";
 const Banner = () => {
   return (
     <div>
-      <div class="carousel w-full">
-        <div id="item1" class="carousel-item w-full">
+      <div className="carousel w-full">
+        <div id="item1" className="carousel-item w-full">
           <img
-            src="https://api.lorem.space/image/car?w=800&h=200&hash=8B7BCDC2"
-            class="w-full"
+          style={{height: '400px', width: '100%'}}
+            src="https://i.ibb.co/zNqGqNG/bell.jpg"
+            className="w-full"
           />
         </div>
-        <div id="item2" class="carousel-item w-full">
+        <div id="item2" className="carousel-item w-full">
           <img
-            src="https://api.lorem.space/image/car?w=800&h=200&hash=500B67FB"
-            class="w-full"
+           style={{height: '400px', width: '100%'}}
+            src="https://i.ibb.co/BGgdj4w/ligth-with-horn.jpg"
+            className=""
           />
         </div>
-        <div id="item3" class="carousel-item w-full">
+        <div id="item3" className="carousel-item w-full">
           <img
-            src="https://api.lorem.space/image/car?w=800&h=200&hash=A89D0DE6"
-            class="w-full"
+           style={{height: '400px', width: '100%'}}
+            src="https://i.ibb.co/JmWvq89/looking-glass.jpg"
+            className="w-full"
           />
         </div>
-        <div id="item4" class="carousel-item w-full">
+        <div id="item4" className="carousel-item w-full">
           <img
-            src="https://api.lorem.space/image/car?w=800&h=200&hash=225E6693"
-            class="w-full"
+           style={{height: '400px', width: '100%'}}
+            src="https://i.ibb.co/mD42GQ4/metre.jpg"
+            className="w-full"
           />
         </div>
       </div>
-      <div class="flex justify-center w-full py-2 gap-2">
-        <a href="#item1" class="btn btn-xs">
+      <div className="flex justify-center w-full py-2 gap-2">
+        <a href="#item1" className="btn btn-xs">
           1
         </a>
-        <a href="#item2" class="btn btn-xs">
+        <a href="#item2" className="btn btn-xs">
           2
         </a>
-        <a href="#item3" class="btn btn-xs">
+        <a href="#item3" className="btn btn-xs">
           3
         </a>
-        <a href="#item4" class="btn btn-xs">
+        <a href="#item4" className="btn btn-xs">
           4
         </a>
       </div>

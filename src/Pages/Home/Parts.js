@@ -1,26 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import useProducts from "../../hooks/useProducts";
+import Part from "./Part";
 
 const Parts = () => {
+    const [products] = useProducts();
+
+  
+  
   return (
-    <div class="card w-96 bg-base-100 shadow-xl">
-      <figure>
-        <img
-          src="https://api.lorem.space/image/shoes?w=400&h=225"
-          alt="Shoes"
-        />
-      </figure>
-      <div class="card-body">
-        <h2 class="card-title">
-          Shoes!
-          <div class="badge badge-secondary">NEW</div>
-        </h2>
-        <p>If a dog chews shoes whose shoes does he choose?</p>
-        <div class="card-actions justify-end">
-          <div class="badge badge-outline">Fashion</div>
-          <div class="badge badge-outline">Products</div>
-        </div>
+      <div className="" >
+          <h2 className="mt-[100px] mb-[40px] text-center text-4xl font-bold">Our Products</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-[40px] ">
+          {products.slice(0,6).map(product=><Part key={product._id} product={product}></Part>)}
       </div>
-    </div>
+      </div>
+      
+   
   );
 };
 

@@ -1,22 +1,16 @@
 import React from "react";
+import useProducts from "../../hooks/useProducts";
+import Part from "./Part";
 
 const Mall = () => {
+  const [products] = useProducts();
   return (
-    <div class="card w-96 bg-base-100 shadow-xl image-full">
-      <figure>
-        <img
-          src="https://api.lorem.space/image/shoes?w=400&h=225"
-          alt="Shoes"
-        />
-      </figure>
-      <div class="card-body">
-        <h2 class="card-title">Shoes!</h2>
-        <p>If a dog chews shoes whose shoes does he choose?</p>
-        <div class="card-actions justify-end">
-          <button class="btn btn-primary">Buy Now</button>
-        </div>
+    <div className="">
+          <h2 className="mt-[100px] mb-[40px] text-center text-4xl font-bold">Latest Products</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4 mx-auto">
+          {products.slice(6,12).map(product=><Part key={product._id} product={product}></Part>)}
       </div>
-    </div>
+      </div>
   );
 };
 

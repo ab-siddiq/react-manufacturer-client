@@ -46,7 +46,7 @@ const Login = () => {
   };
   return (
     <div className="flex items-center justify-center py-10">
-      <div className="card w-96 bg-base-100 shadow-xl ">
+      <div className="card w-full bg-base-100 shadow-xl ">
         <div className="card-body">
           <h2 className="card-title">Please login!</h2>
           <form onSubmit={handleSubmit(onSubmit)}>

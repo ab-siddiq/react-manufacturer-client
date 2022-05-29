@@ -5,7 +5,7 @@ const useToken = (user) => {
   const currentUser = { email: email };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/user/${email}`, {
+    fetch(`https://intense-sierra-65183.herokuapp.com/user/${email}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
