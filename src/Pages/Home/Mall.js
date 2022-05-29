@@ -1,8 +1,8 @@
 import React from "react";
 
-const Parts = () => {
+const Mall = () => {
   return (
-    <div class="card w-96 bg-base-100 shadow-xl">
+    <div class="card w-96 bg-base-100 shadow-xl image-full">
       <figure>
         <img
           src="https://api.lorem.space/image/shoes?w=400&h=225"
@@ -10,18 +10,14 @@ const Parts = () => {
         />
       </figure>
       <div class="card-body">
-        <h2 class="card-title">
-          Shoes!
-          <div class="badge badge-secondary">NEW</div>
-        </h2>
+        <h2 class="card-title">Shoes!</h2>
         <p>If a dog chews shoes whose shoes does he choose?</p>
         <div class="card-actions justify-end">
-          <div class="badge badge-outline">Fashion</div>
-          <div class="badge badge-outline">Products</div>
+          <button class="btn btn-primary">Buy Now</button>
         </div>
       </div>
     </div>
   );
 };
 
-export default Parts;
+export default Mall;

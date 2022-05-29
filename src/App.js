@@ -3,6 +3,7 @@ import "./App.css";
 import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
 import About from "./Pages/About/About";
+import Blogs from "./Pages/Blogs/Blogs";
 import AddReview from "./Pages/DashBoard/AddReview/AddReview";
 import AllUsers from "./Pages/DashBoard/AllUsers/AllUsers";
 import DashBoard from "./Pages/DashBoard/DashBoard";
@@ -11,6 +12,7 @@ import MyOrders from "./Pages/DashBoard/MyOrders/MyOrders";
 import MyProfile from "./Pages/DashBoard/MyProfile/MyProfile";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
+import MyPortfolio from "./Pages/MyPortfolio/MyPortfolio";
 import NotFound from "./Pages/NotFound/NotFound";
 import Products from "./Pages/Products/Products";
 import Register from "./Pages/Register/Register";
@@ -32,6 +34,8 @@ function App() {
           <Route path="myOrders" element={<MyOrders></MyOrders>}></Route>
           <Route path="allUsers" element={<AllUsers></AllUsers>}></Route>
         </Route>
+        <Route path="/myPortfolio" element={<MyPortfolio></MyPortfolio>}></Route>
+        <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         {/* <Route path="/myProfile" element={<MyProfile></MyProfile>}></Route>
         <Route path="/addReview" element={<AddReview></AddReview>}></Route>
         <Route path="/myOrders" element={<MyOrders></MyOrders>}></Route> */}
