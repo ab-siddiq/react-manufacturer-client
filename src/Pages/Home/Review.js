@@ -8,7 +8,7 @@ const Review = ({ review }) => {
         <img
         style={{height: '100px', width: '100px', borderRadius: '50%', border: '1px solid grey'}}
           src={image}
-          alt="Shoes"
+          alt={image}
           class="rounded-xl"
         />
       </figure>
