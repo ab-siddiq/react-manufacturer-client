@@ -1,6 +1,9 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../../firebase.init';
 
 const User = ({user,index,refetch}) => {
+    const [loginUser] = useAuthState(auth);
     const {email,role} = user;
     const makeAdmin = () =>{
         fetch(`http://localhost:5000/user/admin/${email}`,{
