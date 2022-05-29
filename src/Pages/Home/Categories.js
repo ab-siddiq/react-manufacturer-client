@@ -11,7 +11,7 @@ const Categories = () => {
   return (
     <div className="">
       <h2 className="text-4xl font-bold mt-[100px] mb-[40px] text-center">Categories</h2>
-      <div className="grid grid-cols-4 gap-[20px]">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-[20px]">
           {categories.map(category=><Category key={category._id} category={category}></Category>)}
       </div>
     </div>
