@@ -1,12 +1,17 @@
 import React from "react";
 
 const Review = ({ review }) => {
-  const {name, message,image} = review;
+  const { name, message, image } = review;
   return (
-    <div class="card w-full bg-base-100 shadow-xl my-[40px]">
+    <div class="card w-full bg-base-100 shadow-xl my-[40px] bg-gray-600 text-zinc-300">
       <figure class="px-10 pt-10">
         <img
-        style={{height: '100px', width: '100px', borderRadius: '50%', border: '1px solid grey'}}
+          style={{
+            height: "100px",
+            width: "100px",
+            borderRadius: "50%",
+            border: "1px solid grey",
+          }}
           src={image}
           alt={image}
           class="rounded-xl"

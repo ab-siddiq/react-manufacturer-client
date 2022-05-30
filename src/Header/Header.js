@@ -28,7 +28,6 @@ const Header = () => {
         <Link to="/myPortfolio">My Portfolio</Link>
       </li>
 
-
       <li>{user && <Link to="/dashboard">Dashboard</Link>}</li>
 
       {user ? (
@@ -47,7 +46,7 @@ const Header = () => {
     </>
   );
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-gray-600 text-zinc-300">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex="0" className="btn btn-ghost lg:hidden">

@@ -26,7 +26,7 @@ const Footer = () => {
           <a className="link link-hover">Cookie policy</a>
         </div>
       </footer>
-      <footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
+      <footer className="footer px-10 py-4 border-t bg-gray-600 text-zinc-300 border-gray-700">
         <div className="items-center grid-flow-row">
           <p className="">
             {new Date().getFullYear()} &copy; Cycle Manufacturer Company.
