@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import usePurchase from "../../hooks/usePurchase";
 
 const Part = ({ product }) => {
-  const { name, image, description, price, quantity, ratings } = product;
+  const { _id, name, image, description, price, quantity, ratings } = product;
+  const [setPurchase] = usePurchase();
+  const navigate = useNavigate();
+
+  const handleBuyNow = (id) => {
+    console.log(id);
+    navigate(`/purchase/${id}`);
+  };
   return (
     <div className="card w-full bg-gray-600 text-zinc-300 border-gray-600 shadow-xl my-5">
       <figure>
@@ -21,11 +30,23 @@ const Part = ({ product }) => {
         </div>
 
         <p>{description.slice(0, 80)}</p>
-        <div className="card-actions justify-end">
-          <div className="badge badge-outline py-4">
-            Available: {quantity} units
+        <div className="flex justify-between items-center mt-[20px]">
+          <div className="card-actions ">
+            <div className="badge badge-outline py-4">
+              Available: {quantity} units
+            </div>
+            <div className="badge badge-outline py-4">Rating: {ratings}</div>
           </div>
-          <div className="badge badge-outline py-4">Rating: {ratings}</div>
+          <div className="">
+            <button
+              onClick={() => {
+                handleBuyNow(_id);
+              }}
+              class="btn btn-secondary "
+            >
+              Buy Now
+            </button>
+          </div>
         </div>
       </div>
     </div>

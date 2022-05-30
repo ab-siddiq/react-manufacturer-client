@@ -15,6 +15,7 @@ import Login from "./Pages/Login/Login";
 import MyPortfolio from "./Pages/MyPortfolio/MyPortfolio";
 import NotFound from "./Pages/NotFound/NotFound";
 import Products from "./Pages/Products/Products";
+import Purchase from "./Pages/Purchase/Purchase";
 import Register from "./Pages/Register/Register";
 
 function App() {
@@ -34,8 +35,15 @@ function App() {
           <Route path="myOrders" element={<MyOrders></MyOrders>}></Route>
           <Route path="allUsers" element={<AllUsers></AllUsers>}></Route>
         </Route>
-        <Route path="/myPortfolio" element={<MyPortfolio></MyPortfolio>}></Route>
+        <Route
+          path="/myPortfolio"
+          element={<MyPortfolio></MyPortfolio>}
+        ></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
+        <Route
+          path="/purchase/:purchaseId"
+          element={<Purchase></Purchase>}
+        ></Route>
         {/* <Route path="/myProfile" element={<MyProfile></MyProfile>}></Route>
         <Route path="/addReview" element={<AddReview></AddReview>}></Route>
         <Route path="/myOrders" element={<MyOrders></MyOrders>}></Route> */}
