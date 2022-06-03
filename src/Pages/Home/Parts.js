@@ -5,7 +5,9 @@ import Part from "./Part";
 const Parts = () => {
     const [products] = useProducts();
 
-  
+
+    
+  console.log(products,'prod')
   
   return (
       <div className="" >

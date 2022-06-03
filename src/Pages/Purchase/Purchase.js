@@ -12,17 +12,17 @@ const Purchase = () => {
   }, []);
   console.log(purchase);
   return (
-    <div class="hero min-h-screen bg-base-200">
-      <div class="hero-content flex-col lg:flex-row">
-        <img src={image} class="max-w-sm rounded-lg shadow-2xl" />
+    <div className="hero min-h-screen bg-base-200">
+      <div className="hero-content flex-col lg:flex-row">
+        <img src={image} className="max-w-sm rounded-lg shadow-2xl" />
         <div>
-          <h1 class="text-5xl font-bold mb-[10px]">{name}</h1>
+          <h1 className="text-5xl font-bold mb-[10px]">{name}</h1>
           <span className="mx-[20px]">Rating: {ratings}</span>
           <span className="mx-[20px]">
             Available Product: {quantity} {quantity > 1 ? "units" : "unit"}
           </span>
 
-          <p class="py-6">{description}</p>
+          <p className="py-6">{description}</p>
           <div className="ml-[40px]">
             <button className="btn">-</button>
             <input
@@ -32,8 +32,8 @@ const Purchase = () => {
             />
             <button className="btn ">+</button>
           </div>
-          <button class="btn btn-primary mx-[10px]">Buy Now</button>
-          <button class="btn btn-primary mx-[10px]">Add To Cart</button>
+          <button className="btn btn-primary mx-[10px]">Buy Now</button>
+          <button className="btn btn-primary mx-[10px]">Add To Cart</button>
         </div>
       </div>
     </div>

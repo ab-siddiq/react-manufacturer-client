@@ -3,8 +3,8 @@ import React from "react";
 const Review = ({ review }) => {
   const { name, message, image } = review;
   return (
-    <div class="card w-full bg-base-100 shadow-xl my-[40px] bg-gray-600 text-zinc-300">
-      <figure class="px-10 pt-10">
+    <div className="card w-full bg-base-100 shadow-xl my-[40px] bg-gray-600 text-zinc-300">
+      <figure className="px-10 pt-10">
         <img
           style={{
             height: "100px",
@@ -14,14 +14,14 @@ const Review = ({ review }) => {
           }}
           src={image}
           alt={image}
-          class="rounded-xl"
+          className="rounded-xl"
         />
       </figure>
-      <div class="card-body items-center text-center">
-        <h2 class="card-title">{name}</h2>
+      <div className="card-body items-center text-center">
+        <h2 className="card-title">{name}</h2>
         <p>{message}</p>
-        {/* <div class="card-actions">
-          <button class="btn btn-primary">Buy Now</button>
+        {/* <div className="card-actions">
+          <button className="btn btn-primary">Buy Now</button>
         </div> */}
       </div>
     </div>

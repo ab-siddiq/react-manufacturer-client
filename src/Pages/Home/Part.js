@@ -42,7 +42,7 @@ const Part = ({ product }) => {
               onClick={() => {
                 handleBuyNow(_id);
               }}
-              class="btn btn-secondary "
+              className="btn btn-secondary "
             >
               Buy Now
             </button>
