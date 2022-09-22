@@ -6,7 +6,7 @@ const User = ({user,index,refetch}) => {
     const [loginUser] = useAuthState(auth);
     const {email,role} = user;
     const makeAdmin = () =>{
-        fetch(`https://intense-sierra-65183.herokuapp.com/user/admin/${email}`,{
+        fetch(`https://enigmatic-journey-32306.herokuapp.com/user/admin/${email}`,{
             method: 'PUT',
             // headers: {
             //     'content-type': 'application/json'
@@ -19,7 +19,7 @@ const User = ({user,index,refetch}) => {
         })
     }
     const makeUser = () =>{
-        fetch(`https://intense-sierra-65183.herokuapp.com/user/nUser/${email}`,{
+        fetch(`https://enigmatic-journey-32306.herokuapp.com/user/nUser/${email}`,{
             method: 'PUT',
             // headers: {
             //     'content-type': 'application/json'

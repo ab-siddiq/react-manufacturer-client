@@ -4,7 +4,7 @@ const useProducts = () => {
     const [products,setProducts] = useState([]);
 
     useEffect(()=>{
-        fetch('https://intense-sierra-65183.herokuapp.com/products')
+        fetch('https://enigmatic-journey-32306.herokuapp.com/products')
         .then(res=>res.json())
         .then(data=>setProducts(data));
     },[])

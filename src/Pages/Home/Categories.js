@@ -4,7 +4,7 @@ import Category from "./Category";
 const Categories = () => {
   const [categories, setCategories] = useState([]);
   useEffect(() => {
-    fetch("https://intense-sierra-65183.herokuapp.com/categories")
+    fetch("https://enigmatic-journey-32306.herokuapp.com/categories")
       .then((res) => res.json())
       .then((data) => setCategories(data));
   }, []);

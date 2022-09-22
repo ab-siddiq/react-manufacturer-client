@@ -26,7 +26,7 @@ const Purchase = () => {
   };
 
   useEffect(() => {
-    fetch(`https://intense-sierra-65183.herokuapp.com/purchase/${purchaseId}`)
+    fetch(`https://enigmatic-journey-32306.herokuapp.com/purchase/${purchaseId}`)
       .then((res) => res.json())
       .then((data) => setPurchase(data));
   }, []);
