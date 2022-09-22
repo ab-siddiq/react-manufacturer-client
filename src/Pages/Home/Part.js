@@ -37,7 +37,7 @@ const Part = ({ product }) => {
             </div>
             <div className="badge badge-outline py-4">Rating: {ratings}</div>
           </div>
-          <div className="">
+          <div className="card-actions ">
             <button
               onClick={() => {
                 handleBuyNow(_id);
